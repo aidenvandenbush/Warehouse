@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Warehouse.DataPage">
+
+    <ListView x:Name="Orders" ItemSelected="listViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="{Binding number}"
+                               FontSize="Medium"
+                               TextColor="Black"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+</ContentPage>

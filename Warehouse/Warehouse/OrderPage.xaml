@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Warehouse.OrderPage">
+    <StackLayout>
+        <CarouselView x:Name="Items" IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label Text="{Binding name}"
+                               FontSize="Large"
+                               TextColor="Black"
+                               HorizontalTextAlignment="Center"/>
+                        <Label Text="{Binding amount}"
+                               FontSize="Large"
+                               TextColor="Black"
+                               HorizontalTextAlignment="Center"/> 
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
